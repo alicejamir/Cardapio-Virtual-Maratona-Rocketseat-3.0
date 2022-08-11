@@ -21,12 +21,26 @@
     <title>RocketCoffe</title>
   </head>
   <body>
-    <header>
+    <header id="header">
+      <nav class="container">
+        <!-- menu -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#entradas">Entradas</a></li>
+            <li><a class="title" href="#bebidas">Bebidas</a></li>
+            <li><a class="title" href="#pratos">Pratos</a></li>
+            <li><a class="title" href="#sobremesa">sobremesa</a></li>
+          </ul>
+        </div>
+        <!-- /menu -->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-x"></div>
+      </nav>
       <a id="home" href="">Rocket<span>Coffe</span>.</a>
       <p>Aberto todos os dias. 8h - 21h</p>
     </header>
     <section>
-      <h2>ENTRADAS</h2>
+      <h2 id="entradas">Entrdas</h2>
       <ul>
         <li>
           <div>
@@ -58,7 +72,7 @@
       </ul>
     </section>
     <section>
-      <h2>bebida</h2>
+      <h2 id="bebidas">bebida</h2>
       <ul>
         <li>
           <div>
@@ -84,7 +98,7 @@
       </ul>
     </section>
     <section>
-      <h2>Pratos</h2>
+      <h2 id="pratos">Pratos</h2>
       <ul>
         <li>
           <div>
@@ -118,9 +132,38 @@
         </li>
       </ul>
     </section>
+    <section>
+      <h2 id="sobremesa">sobremesa</h2>
+      <ul>
+        <li>
+          <div>
+            <h3>mousse</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <strong>R$9,50</strong>
+        </li>
+        <li>
+          <div>
+            <h3>torta</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <strong>R$12,00</strong>
+        </li>
+        <li>
+          <div>
+            <h3>brigadeiro</h3>
+            <p>Lorem ipsum, amet consectetur adipisicing elit.</p>
+          </div>
+          <strong>R$5,00</strong>
+        </li>
+      </ul>
+    </section>
     <footer></footer>
-
-    <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+    <!-- BACK-TO-TOP -->
+    <a href="#header" class="back-to-top"><i class="icon-arrow-up"></i></a>
 
     <!-- main.js -->
     <script src="main.js"></script>
