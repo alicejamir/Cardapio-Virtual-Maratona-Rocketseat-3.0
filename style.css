@@ -24,13 +24,15 @@ a, h2, h3, .price {
 }
 
 header {
-  padding: 2rem 0;
   text-align: center;
+margin: 0 auto;
 }
+
 
 .title{
   color: #2D2C2A;
   margin-bottom: 0.6rem;
+  
 }
 
 .grid {
@@ -40,22 +42,24 @@ header {
 
 header , section {
   width: 22rem;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 header a {
   color: #2D2C2A;
   font-size: 1.8rem;
-  line-height: 2rem;
+  line-height: 0;
 }
 
 header p {
   font-size: 1rem;
   line-height: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
  header span {
-  color: #995000;
+  color: #7d4912c5;
 }
 
 section {
@@ -65,19 +69,22 @@ section {
 h2 { 
   background-color: #FED7AA;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
 }
 
 ul li {
   margin-bottom: 1rem;
   display: flex;
+  justify-content: space-between;
 }
 
 h3 {
   margin-bottom: 0.5rem;
 }
 
+/* toggle menu , para editar as características dos icones de menu*/
 .toggle {
   color: #2D2C2A;
   font-size: 1.5rem;
@@ -85,29 +92,40 @@ h3 {
   margin-bottom: 1rem;
 }
 
+/* para colocar um item ao lado do outro, com o display flex e colocar o espaco entre eles*/
 nav {
+  height: 6rem;
   display: flex;
-  justify-content: end;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
-  
+/* para deixar o itens do menu centralizados*/
+nav ul li {
+  text-align: center;
+}
+
+/*para ficar oculto e nao aparecer o espaco, na pagina, do menu*/
 nav .menu ul {
   display: none;
 }
 
-nav ul li {
-  text-align: center;
-
-  height: 2rem;
-  padding: 0.5rem;
-}
-
+/*Configuramos para que o menu inicie invisivel*/
 nav .menu {
   opacity: 0;
   visibility: hidden;
   top: -20rem;
-  transition: 0.2s;
+  transition: 0.2s;  
 }
 
+nav .icon-menu{
+  margin-top: 1.5rem;
+}
+nav.show ul li a{
+  padding: 1rem;
+ 
+}
+/* configuracao para o menu aparcer quando clica no menu*/
 nav.show .menu {
   opacity: 1;
   visibility: visible;
@@ -126,31 +144,29 @@ nav.show .menu {
   
 }
 
+/* configuracao para o menu aparcer quando clica no menu*/
 nav.show .menu ul {
   display: grid;
-  text-align: center;
 }
 
 nav.show ul.grid {
-  display: grid;
-  max-width: 22rem;
-  height: 27rem;
-  margin: 0 auto;
   justify-items: center;
-  gap: 0.1rem;
-  padding: 4rem;
-  
+  margin-top: 3rem;
+  gap: 0rem;
 }
 
+/* para fazer uma transiçao de cor quando passar o mouse em cima */
 nav ul li a {
   transition: color 0.2s;
   position: relative;
- 
+}
+/* para fazer uma transiçao de cor quando passar o mouse em cima, aqui voce configura a cor que o nome vai ficar com a transição. */
+nav ul li a:hover {
+  color: #7d4912c5;
 }
 
-nav ul li a:hover {
-  color: #995000;
-}
+
+/* para fazer uma transiçao de cor quando passar o mouse em cima. depois de configurar o houver, configura o after (com a cor da linha que vai aparecer em baixo e as configurações da transiçao */
 
 nav ul li a::after {
   content: '';
@@ -164,11 +180,12 @@ nav ul li a::after {
 
   transition: width 0.2s;
 }
-
+/* para fazer a listrinha passando quando passa o mause no nome. configuramos o hover, depois o affter e aqui colocamos de onde para onde vai a lnha que criamos no after.*/
 nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Para que o icone x, do fechar, inicie oculto na pagina*/
 nav .icon-x {
   margin-right: 2.3rem;
   margin-top: 0.5rem;
@@ -183,10 +200,25 @@ nav .icon-x {
   transition: 0.2s;
 }
 
+/*configuraçao para quando apertar no icone do menu(hamburguer) aparecer o icone do x(para fechar)*/
 nav.show div.icon-x {
   visibility: visible;
   opacity: 1;
   top: 1.5rem;
+}
+
+img {
+  position: relative;
+  margin-top: 1rem;
+  width: 8rem;
+  margin-left: 2.5rem;
+  justify-content: center;
+}
+
+nav.show img{
+  position: fixed;
+top: -2rem;
+left: 9.1rem;
 }
 
 /*back to top*/
